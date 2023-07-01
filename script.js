@@ -61,6 +61,7 @@ async function getExchangeInfo() {
 
 async function makeUI(datas) {
   const tableElement = document.getElementById("table");
+  datas = datas.sort((a, b) => a.rsi - b.rsi);
   for (const data of datas) {
     const tr = document.createElement("tr");
 
